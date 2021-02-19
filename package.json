@@ -1,0 +1,32 @@
+{
+  "name": "Nonoko",
+  "version": "1.0.0",
+  "description": "Momokos sister",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graweedman/Bot-Framework.git"
+  },
+  "keywords": [
+    "Discord.js"
+  ],
+  "author": "Graweedman, niba12ww@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/graweedman/Bot-Framework/issues"
+  },
+  "homepage": "https://github.com/graweedman/Bot-Framework#readme",
+  "dependencies": {
+    "chance": "^1.1.7",
+    "discord.js": "^12.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.13",
+    "react": "^17.0.1",
+    "react-scripts": "^4.0.2",
+    "reactdom": "^2.0.0"
+  }
+}
