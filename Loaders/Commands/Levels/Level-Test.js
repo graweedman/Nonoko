@@ -25,7 +25,7 @@ module.exports = {
             message.channel.send(new MessageEmbed(
                 {
                     title: `Level ${User.level}`,
-                    description: `${User.xp}/${LevelXP(User.level)} XP \n ${xpGauge(User.xp, User.level, 20)}`,
+                    description: `${User.xp}/${LevelXP(User.level)} XP \n ${xpGauge(User.xp, User.level, 18)}`,
                     thumbnail: { url: member.user.avatarURL() },
                     fields: [{name:`Rank`, value: getRank(member)}]
                 }))
