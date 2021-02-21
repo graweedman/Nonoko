@@ -11,11 +11,9 @@ module.exports = (client, commandOptions) =>
         maxArgs = null,
         permissions = [],
         requiredRoles = [],
-        allowedChannels = [],
+        allowedChannels = ["812461710153089025"],
         callBack
     } = commandOptions
-    
-    allowedChannels.push("812461710153089025")
 
     if(typeof commands === "string"){
         commands = [commands]
