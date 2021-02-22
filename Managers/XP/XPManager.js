@@ -1,6 +1,6 @@
 const Chance = require("chance")
 //const { MessageEmbed } = require("discord.js")
-const rate = 0.2;
+const rate = 0.4;
 module.exports.LevelRoles = 
     [
         {$role:`811236355732013087`,Rlevel:1 },
