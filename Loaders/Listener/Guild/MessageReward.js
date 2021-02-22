@@ -25,5 +25,5 @@ module.exports = {
         }
         await UserManager.User(message.author, reward, true)
     },
-    ignoredChannels: ['811003540398145588',"812625802234822676"]
+    ignoredChannels: ['811003540398145588',"812625802234822676","812623795562479667" ]
 }
