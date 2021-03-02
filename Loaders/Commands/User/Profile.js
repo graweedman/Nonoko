@@ -4,7 +4,7 @@ const {MessageEmbed, User} = require("discord.js")
 const { LevelXP, GetLevel, xpGauge } = require("../../../Managers/XP/XPManager")
 
 module.exports = {
-    commands: ["profile", "p","user"],
+    commands: ["profile","user"],
     expectedArgs: "none or <User1>",
     permissionError: "You do not have required permissions",
     description: "Shows profile",

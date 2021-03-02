@@ -11,7 +11,7 @@ module.exports = (client, commandOptions) =>
         maxArgs = null,
         permissions = [],
         requiredRoles = [],
-        allowedChannels = ["812461710153089025"],
+        allowedChannels = ["812461710153089025","813500872990130246"],
         callBack
     } = commandOptions
 
@@ -57,10 +57,10 @@ module.exports = (client, commandOptions) =>
                     message.channel.send("You dont have required Role")
                     return
                 }
-
+                console.log(allowedChannels.length)
                 if(allowedChannels.length)
                 {
-                    
+                    console.log(message.channel.id)
                     if(allowedChannels.includes(message.channel.id))
                     {
                         //console.log(message.channel.id)
@@ -68,7 +68,7 @@ module.exports = (client, commandOptions) =>
                     }
                     else
                     {
-                        isAllowed = false 
+                        isAllowed = false
                     }
                 }
                 if(!isAllowed)

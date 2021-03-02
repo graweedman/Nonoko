@@ -38,11 +38,11 @@ module.exports.setRank = (level,member) =>
     this.LevelRoles.forEach(({ Rlevel, $role },index) =>
     {
         //if(levelfound)return
-        console.log(Rlevel,this.LevelRoles[index+1])
+        //console.log(Rlevel,this.LevelRoles[index+1])
         if(level >= Rlevel && level < (this.LevelRoles[index+1] ? this.LevelRoles[index+1].Rlevel : 999) && !member.roles.cache.has($role))
         {   
             RemovePrevious($role,member)
-            console.log(`add role`)
+            //console.log(`add role`)
             let role = member.guild.roles.cache.get($role)
             member.roles.add(role).catch(console.error)
             //this.LevelRoles.find()
@@ -69,7 +69,7 @@ RemovePrevious = (role,member) =>
     {
         if(role === $role)return
         Arole = member.guild.roles.cache.get($role)
-        console.log(Arole.name, Arole.id)
+        //console.log(Arole.name, Arole.id)
         //console.log(role, $role)
         
         member.roles.remove( $role ).catch(console.error)
