@@ -71,8 +71,8 @@ module.exports = {
             message.channel.send(`Channel not Found!`)
             return
         }
-        embed.setTitle(`Poll ${arguments[1]}`)
-        embed.setDescription(arguments[0])
+        embed.setTitle(`Poll ${arguments[0]}`)
+        embed.setDescription(arguments[1])
         embed.fields = createFields(votes)
         // let embed = new MessageEmbed(
         //     {
@@ -124,7 +124,7 @@ module.exports = {
             .then(collected => 
                 {
                     
-                    embed.setTitle(`Results of ${arguments[1]}`),
+                    embed.setTitle(`Results of ${arguments[0]}`),
                     embed.setDescription(`**${findWin(votes)}** has most of the votes`),
                     //embed.fields = createFields(votes),
                     message.edit(embed)
