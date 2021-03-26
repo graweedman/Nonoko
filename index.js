@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 
-const { Client } = require("discord.js")
+const { Client, Message } = require("discord.js")
 const { token , connect } = require("./config.json")
 
 const loadCommands = require("./Loaders/Commands/load-commands")
@@ -21,3 +21,11 @@ client.on("ready", () =>
     loadListeners(client)
 })
 client.login(token)
+
+client.on("message", (message) =>
+{
+  if(message.content === "reine")
+  {
+    message.reply(`https://tenor.com/view/pretty-boy-model-male-model-handsome-hot-gif-12758592`)
+  }
+})

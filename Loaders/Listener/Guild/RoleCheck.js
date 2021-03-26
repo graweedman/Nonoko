@@ -16,7 +16,7 @@ module.exports = {
 
         const checkRoles = (User) => {
             CheckedRoles.add(member.id)
-            setRank(User.level, member)
+            if(User) setRank(User.level, member)
             setTimeout(()=>
             {
                 CheckedRoles.delete(member.id)

@@ -8,5 +8,6 @@ const mongoose = require('mongoose');
     xp:   Number,
     level: Number,
     daily: Date,
-    currency: Number
+    currency: Number,
+    messageCount: Number
   });

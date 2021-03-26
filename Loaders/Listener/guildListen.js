@@ -54,7 +54,7 @@ module.exports = (client, ListenOptions) =>
             hasRoles = true
         }
         if(!hasRoles)return
-        if(condition(message))
+        if(condition(message, client))
         {
             callBack(message)
         }
