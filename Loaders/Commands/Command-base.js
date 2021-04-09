@@ -1,7 +1,7 @@
 const { prefix } = require("../../config.json")
 const usedCommand = new Set();
 
-module.exports = (client, commandOptions) =>
+module.exports = (client, commandOptions, dev) =>
 {
     let {
         commands,
@@ -22,13 +22,16 @@ module.exports = (client, commandOptions) =>
     console.log(`Registering command "${commands[0]}"`)
 
     client.on("message", message => {
-        const { member, content , guild } = message
+        
+        const { member, content , guild, author } = message
+        
         let hasRoles = false
         let isAllowed = true
         for(const alias of commands)
         {
             if(content.toLowerCase().startsWith(`${prefix}${alias.toLowerCase()}`))
             {
+                if(dev && author.id !== "272697254165348353")return
                 if(usedCommand.has(message.author.id))
                 {
                     message.channel.send("Wait 5 seconds before using another command.")

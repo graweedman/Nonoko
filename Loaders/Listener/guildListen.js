@@ -1,4 +1,4 @@
-module.exports = (client, ListenOptions) =>
+module.exports = (client, ListenOptions, dev) =>
 {
     let {
         listener,
@@ -11,6 +11,7 @@ module.exports = (client, ListenOptions) =>
     } = ListenOptions
     client.on("message", message =>
     {
+        
         let hasRoles = false
         let {
             author,
@@ -18,6 +19,7 @@ module.exports = (client, ListenOptions) =>
             member,
             guild
         } = message
+        if(dev && author.id !== "272697254165348353")return
         if(channel.type === "dm")return
         if(listener)
         {

@@ -16,7 +16,7 @@ module.exports = {
     },
     callBack: async (message) =>
     {
-        let {content} = message
+        let {content, author} = message
         content = content.toLowerCase()
         console.log(message.content)
 
@@ -24,7 +24,7 @@ module.exports = {
         //-----------------------------------------------Graw-------------------------------------------------------------
 
 
-        if(message.author.id === "272697254165348353")
+        if(author.id === "272697254165348353")
         {
             
             if(content.includes("love"))
@@ -68,7 +68,16 @@ module.exports = {
             message.channel.send("Hello master. Love you. <:MeruLuv:812573648883548210>")
             return
         }
+        //-----------------------------------------------Kyo------------------------------------------------------------
 
+        //if( message.author.id === 701055798725312533)
+        //-----------------------------------------------Hana-----------------------------------------------------------
+
+        if(message.author.id === "779996172793544735")
+        {
+            message.channel.send("Hello Hana. Love you too. <:MeruLuv:812573648883548210>")
+            return
+        }
         //-----------------------------------------------Others---------------------------------------------------------
         if(ignore)
         {

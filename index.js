@@ -6,6 +6,8 @@ const { token , connect } = require("./config.json")
 
 const loadCommands = require("./Loaders/Commands/load-commands")
 const loadListeners = require("./Loaders/Listener/load-listeners")
+const loadActions = require("./Loaders/Actions/LoadAction")
+const dev = process.argv[2]
 //const loadListeners = require("")
 
 const client = new Client({ 
@@ -17,8 +19,9 @@ client.on("ready", () =>
 {
     console.log("Bot started.")
     //loadMessages(client)
-    loadCommands(client)
-    loadListeners(client)
+    loadCommands(client, dev)
+    loadListeners(client, dev)
+    loadActions(client, dev)
 })
 client.login(token)
 

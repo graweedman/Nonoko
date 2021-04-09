@@ -1,0 +1,177 @@
+{
+  "fumo": {
+    "gif": [
+      "https://media.discordapp.net/attachments/822533854799462450/827268970540957756/tenor_5.gif",
+      "https://media.discordapp.net/attachments/822533854799462450/827262416298573944/tenor_3.gif",
+      "https://media.discordapp.net/attachments/812010059256823848/825068815225323550/necunoscut.gif"
+    ],
+    "response": {
+      "default": "A wild fumo appears"
+    }
+  },
+  "kill": {
+    "gif": [
+      "https://tenor.com/view/ban-push-throw-user-admin-banned-gif-17368173",
+      "https://tenor.com/view/angry-luca-upset-getting-mad-irritated-gif-20783025",
+      "https://tenor.com/view/lilo-kill-anyone-kill-someone-disney-gif-8319655",
+      "https://tenor.com/view/black-cauldron-caldeir%C3%A3o-negro-disney-fflewddur-fflam-gurgi-gif-11760821",
+      "https://tenor.com/view/kill-you-sailor-moon-cant-breathe-gif-15062996",
+      "https://i.kym-cdn.com/photos/images/original/001/890/995/e1c.gif"
+    ],
+    "response": {
+      "default": "Someone is getting killed",
+      "mentioned": "You just killed"
+    }
+  },
+  "bonk": {
+    "gif": [
+      "https://cdn.discordapp.com/attachments/810994280897445960/827362420468350996/1491059858_ppeootdonbvwaudz3avi.gif",
+      "https://media1.giphy.com/media/30lxTuJueXE7C/giphy.gif",
+      "https://i.pinimg.com/originals/b0/d2/70/b0d270b7c07757cc6c3fb6efc60229e8.gif",
+      "https://i.pinimg.com/originals/99/ea/48/99ea48ec7a3d63e77186302e8d85426e.gif",
+      "https://i.imgur.com/smgjFNV.gif"
+    ],
+    "response": {
+      "default": "Get Bonked"
+    }
+  },
+  "nagw": {
+    "gif": [
+      "https://tenor.com/view/my-heart-arrow-and-bow-melt-gif-15911150",
+      "https://tenor.com/view/walking-happy-couples-love-saquinon-gif-12088835",
+      "https://tenor.com/view/hungry-poohbear-winnie-the-pooh-pooh-excited-gif-5641248",
+      "https://tenor.com/view/love-hearts-beautiful-shy-gif-10065103",
+      "https://tenor.com/view/squishy-aww-cute-gif-14586457",
+      "https://tenor.com/view/disney-goofy-awkward-blush-play-ears-gif-17584958"
+    ],
+    "response": {
+      "default": "aww",
+      "mentioned": "melted by"
+    }
+  },
+  "welcome": {
+    "gif": [
+      "https://cdn.discordapp.com/attachments/813500872990130246/829743917850427412/welcome-OS.gif",
+      "https://cdn.discordapp.com/attachments/813500872990130246/829743919049736192/welcome-OS2.gif",
+      "https://cdn.discordapp.com/attachments/813500872990130246/829743930295058432/welcome-OS5.gif",
+      "https://cdn.discordapp.com/attachments/813500872990130246/829743928806604810/welcome-OS3.gif"
+    ],
+    "response": {
+      "default": "Welcome to Otakus"
+    }
+  },
+  "love": {
+    "gif": [
+      "https://tenor.com/view/love-i-love-you-couple-friends-friend-gif-12308503",
+      "https://tenor.com/view/anime-love-cupid-cute-menhera-gif-12479111",
+      "https://tenor.com/view/anime-in-love-with-you-i-love-you-i-really-love-you-hearts-gif-16458951",
+      "https://tenor.com/view/lion-king-disney-simbaandnala-love-gif-13303238",
+      "https://tenor.com/view/ily-that70s-show-i-love-you-love-inlove-gif-7364204"
+    ],
+    "response": {
+      "default": "Someone wants to be loved <:MeruCry:812739980748390450>",
+      "mentioned": "In love with"
+    }
+  },
+  "lewd": {
+    "gif": [
+      "https://tenor.com/view/disney-goofy-awkward-blush-play-ears-gif-17584958",
+      "https://tenor.com/view/holding-hands-lewd-anime-blush-censored-gif-15104649",
+      "https://tenor.com/view/%E3%83%8F%E3%82%B0-%E4%BB%B2%E8%89%AF%E3%81%97-%E3%83%A9%E3%83%96-hug-friend-gif-15782411",
+      "https://tenor.com/view/bouncing-peach-naughty-peach-animated-peach-smack-slap-gif-16839087",
+      "https://tenor.com/view/cute-sheep-shave-sheep-shearing-wool-gif-14400450",
+      "https://tenor.com/view/lick-tom-and-jerry-wink-tongue-out-licking-gif-12428211"
+    ],
+    "response": {
+      "default": "grr",
+      "mentioned": "you are no longer innocent"
+    }
+  },
+  "kiss": {
+    "gif": [
+      "https://tenor.com/view/bambi-disney-love-bunny-rabbit-gif-5894358",
+      "https://tenor.com/view/ladyandtramp-disney-kiss-gif-5038810",
+      "https://tenor.com/view/donald-duck-kiss-daisy-duck-going-red-blushing-gif-16707935",
+      "https://tenor.com/view/fox-cute-couple-sweet-in-love-gif-13602066",
+      "https://tenor.com/view/froakie-pokemon-in-love-hearts-blushing-gif-7272968"
+    ],
+    "response": {
+      "default": "mwah",
+      "mentioned": "kissed"
+    }
+  },
+  "hug": {
+    "gif": [
+      "https://tenor.com/view/cartoon-pooh-tigger-friends-love-gif-3525606",
+      "https://tenor.com/view/owl-hug-fox-disney-gif-9631899",
+      "https://tenor.com/view/toilet-bound-hanakokun-anime-anime-hug-gif-16831471",
+      "https://tenor.com/view/happy-hug-anime-gif-19371759",
+      "https://tenor.com/view/cat-pets-animals-kitten-hug-gif-5629780",
+      "https://tenor.com/view/bambi-thumper-flower-skunk-bunny-gif-5467625"
+    ],
+    "response": {
+      "default": "big hug",
+      "mentioned": "sending a warm hug your way"
+    }
+  },
+  "flirt": {
+    "gif": [
+      "https://tenor.com/view/amanda-seyfried-wink-seductive-%E0%A4%86%E0%A4%81%E0%A4%96-%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A4%A8%E0%A4%BE-gif-5480660",
+      "https://tenor.com/view/meow-flirt-cowboy-heyy-come-over-gif-14289994",
+      "https://tenor.com/view/wink-flirty-confident-muscle-bro-gif-14948200",
+      "https://tenor.com/view/sexy-flirt-fall-fail-gif-5109306",
+      "https://tenor.com/view/oh-hey-there-flirty-wink-handsome-gif-14790100",
+      "https://tenor.com/view/wink-flirt-flirting-flirty-gif-8307664",
+      "https://tenor.com/view/couple-cute-lick-gross-gif-14228362"
+    ],
+    "response": {
+      "default": "grr",
+      "mentioned": "Hey there cutie"
+    }
+  },
+  "amongus": {
+    "gif": [
+      "https://tenor.com/view/among-us-gif-18676023",
+      "https://tenor.com/view/boiled-soundcloud-boiled-boiled-irl-boiled-utsc-boiled-cheesestick-agem-soundcloud-gif-20049996"
+    ],
+    "response": {
+      "default": "SUS"
+    }
+  },
+  "sorry": {
+    "gif": [
+      "https://tenor.com/view/im-sorry-bow-puppy-eyes-apologize-gif-8326897",
+      "https://tenor.com/view/sorry-gif-10901690",
+      "https://tenor.com/view/dog-sorry-sad-guilty-awww-gif-12611130",
+      "https://tenor.com/view/ashamed-snowwhite-disney-classic-beautiful-gif-5424679",
+      "https://tenor.com/view/sorry-apologize-eeyore-winnie-the-pooh-gif-8184781"
+    ],
+    "response": {
+      "default": "so so sorry!",
+      "mentioned": "please accept the apology"
+    }
+  },
+  "sing": {
+    "gif": [
+      "https://tenor.com/view/guitar-sing-music-song-gif-14011119",
+      "https://tenor.com/view/all-hail-king-julien-king-julien-ukulele-madagascar-sing-gif-17742991",
+      "https://tenor.com/view/sing-singing-singer-catbug-the-gif-4712628",
+      "https://tenor.com/view/sing-loli-kawaii-music-anime-gif-17341011",
+      "https://tenor.com/view/bang-dream-bandori-anime-aya-maruyama-vibing-gif-17648907"
+    ],
+    "response": {
+      "default": "sing with me",
+      "mentioned": "sing it"
+    }
+  },
+  "monke": {
+    "gif": [
+      "https://tenor.com/view/reject-modernity-return-to-monke-monke-gif-19167526",
+      "https://tenor.com/view/hungry-gorilla-sideeye-gif-5522609",
+      "https://tenor.com/view/monke-monkey-party-monkey-party-monke-party-gif-20251920"
+    ],
+    "response": {
+      "default": "Return to monke"
+    }
+  }
+}

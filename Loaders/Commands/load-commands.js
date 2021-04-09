@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require('fs')
 
-module.exports = (client) => {
+module.exports = (client, dev) => {
     const baseFile = 'Command-base.js'
     const loadFile = 'load-commands.js'
     const commandBase = require(`./${baseFile}`)
@@ -24,7 +24,7 @@ module.exports = (client) => {
                 if(client){
                     //console.log(file,option)
 
-                    commandBase(client, option)
+                    commandBase(client, option, dev)
                 }
             }
         }

@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require('fs')
 
-module.exports = (client) => {
+module.exports = (client, dev) => {
     const guildFile = 'guildListen.js'
     const DMFile = 'dmListen.js'
     const loadFile = 'load-listeners.js'
@@ -20,12 +20,13 @@ module.exports = (client) => {
                 if(client){
                     //console.log(file,option)
 
-                    callBack(client, option)
+                    callBack(client, option, dev)
                 }
             }
         }
     }
     //readCommands('./DM',dmBase, DMFile)
+    if(dev)return
     readCommands('./Guild', guildBase, guildFile)
     //return commands
 }
