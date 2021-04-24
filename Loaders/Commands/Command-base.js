@@ -1,6 +1,6 @@
 const { prefix } = require("../../config.json")
 const usedCommand = new Set();
-
+//this is command base module which controls how the commands are read and activated a lot of verification happens here
 module.exports = (client, commandOptions, dev) =>
 {
     let {

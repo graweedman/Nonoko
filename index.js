@@ -14,20 +14,20 @@ const client = new Client({
     partials: ["MESSAGE", "CHANNEL", "REACTION"],
   });
 
-client.setMaxListeners(100)
+client.setMaxListeners(100) //sets the listener limit because every command is a new lsitening event
 client.on("ready", () =>
 {
     console.log("Bot started.")
     //loadMessages(client)
-    loadCommands(client, dev)
-    loadListeners(client, dev)
-    loadActions(client, dev)
+    loadCommands(client, dev) // Starts up Command module reader, read all the commands into events
+    loadListeners(client, dev) // Starts up Listener module reader, read all the listeners into events
+    loadActions(client, dev) //Starts up seperate Action module for custom action system
 })
-client.login(token)
+client.login(token)  //Connects to the bot API
 
 client.on("message", (message) =>
 {
-  if(message.content === "reine")
+  if(message.content === "reine")  //why is this still here? xD
   {
     message.reply(`https://tenor.com/view/pretty-boy-model-male-model-handsome-hot-gif-12758592`)
   }

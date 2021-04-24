@@ -1,6 +1,6 @@
 const path = require("path")
 const fs = require('fs')
-
+//this is the listener loader where listeners are read from Guild and DM folders Dm.
 module.exports = (client, dev) => {
     const guildFile = 'guildListen.js'
     const DMFile = 'dmListen.js'

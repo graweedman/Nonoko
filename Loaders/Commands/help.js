@@ -1,6 +1,6 @@
 const loadCommands = require('./load-commands')
 const {prefix} = require('../../config.json')
-
+//help command which displays all the listed commands from Commands directory
 module.exports = {
     commands: ["help","h"],
     description: "Lists all of the bot Commands",

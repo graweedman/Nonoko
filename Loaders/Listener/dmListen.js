@@ -1,3 +1,6 @@
+//works same as guildListen only iy listens for DM messages
+
+
 module.exports = (client, ListenOptions) =>
 {
     let {

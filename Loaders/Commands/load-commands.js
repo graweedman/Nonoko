@@ -1,6 +1,6 @@
 const path = require("path")
 const fs = require('fs')
-
+//this module loads up all the commands in /commands directory and its subdirectories
 module.exports = (client, dev) => {
     const baseFile = 'Command-base.js'
     const loadFile = 'load-commands.js'

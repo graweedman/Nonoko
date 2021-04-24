@@ -1,3 +1,5 @@
+//this module is responsible for listening rules and maintain the control of the listeners
+
 module.exports = (client, ListenOptions, dev) =>
 {
     let {

@@ -4,14 +4,14 @@ const Cooldown = new Set();
 const { prefix } = require("../../config.json");
 const { MessageEmbed } = require('discord.js');
 
-
+//this is the main Action loader where bot calls this function to fetch an action from the Actions.json file
 module.exports = (client, dev) =>
 {
     client.on("message", message => {
         const {content, author} = message
         if(dev && author.id !== "272697254165348353")return
 
-        if(content.toLowerCase().startsWith(`${prefix}!`))
+        if(content.toLowerCase().startsWith(`${prefix}!`)) //checks message which statts with prefix and "!" executing action
             {
                 let actionLine = content.split(' ')
                 let action = actionLine[0].substr(prefix.length+1)
