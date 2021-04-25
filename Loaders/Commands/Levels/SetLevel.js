@@ -7,7 +7,7 @@ module.exports = {
     expectedArgs: "<User> <Level>",
     permissionError: "You do not have required permissions",
     description: "Sets level for user",
-    requiredRoles: ["811237382808403988"],
+    requiredRoles: ["835829584507174942", "835829586683363358", "835829591289102378"],
     minArgs: 2,
     maxArgs: 2,
     callBack: (message, arguments, text) => {

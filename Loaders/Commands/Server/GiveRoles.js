@@ -7,7 +7,7 @@ module.exports = {
     expectedArgs: "<mode> <Role>",
     permissionError: "You do not have required permissions",
     description: "Gives every member ar role",
-    requiredRoles: ["810994649980076052", "810994374736478208", "810998543577514064", "811237382808403988"],
+    requiredRoles: ["835829584507174942", "835829586683363358", "835829591289102378"],
     minArgs: 2,
     maxArgs: 2,
     callBack: (message, arguments, text) => {
