@@ -21,7 +21,7 @@ module.exports = (client, ListenOptions, dev) =>
             member,
             guild
         } = message
-        if(dev && author.id !== "272697254165348353")return
+        if((dev && author.id !== "272697254165348353") && (dev && author.id !== "693128983453368381"))return
         if(channel.type === "dm")return
         if(listener)
         {

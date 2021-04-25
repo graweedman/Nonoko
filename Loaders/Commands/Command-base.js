@@ -11,7 +11,7 @@ module.exports = (client, commandOptions, dev) =>
         maxArgs = null,
         permissions = [],
         requiredRoles = [],
-        allowedChannels = ["812461710153089025","813500872990130246"],
+        allowedChannels = [],
         callBack
     } = commandOptions
 
@@ -31,7 +31,7 @@ module.exports = (client, commandOptions, dev) =>
         {
             if(content.toLowerCase().startsWith(`${prefix}${alias.toLowerCase()}`))
             {
-                if(dev && author.id !== "272697254165348353")return
+                if((dev && author.id !== "272697254165348353") && (dev && author.id !== "693128983453368381"))return
                 if(usedCommand.has(message.author.id))
                 {
                     message.channel.send("Wait 5 seconds before using another command.")

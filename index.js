@@ -22,6 +22,7 @@ client.on("ready", () =>
     loadCommands(client, dev) // Starts up Command module reader, read all the commands into events
     loadListeners(client, dev) // Starts up Listener module reader, read all the listeners into events
     loadActions(client, dev) //Starts up seperate Action module for custom action system
+    console.log(dev)
 })
 client.login(token)  //Connects to the bot API
 
