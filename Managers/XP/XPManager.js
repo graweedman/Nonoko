@@ -3,12 +3,12 @@ const Chance = require("chance")
 const rate = 0.4;
 module.exports.LevelRoles = 
     [
-        {$role:`811236355732013087`,Rlevel:1 },
-        {$role:`811276759990927401`,Rlevel:10},
-        {$role:`812384974732263425`,Rlevel:20},
-        {$role:`811276630768877578`,Rlevel:30},
-        {$role:`812384972790693969`,Rlevel:40},
-        {$role:`812384965768511539`,Rlevel:50},
+        {$role:`835957881387745340`,Rlevel:1 },
+        {$role:`835958001172217907`,Rlevel:10},
+        {$role:`835958186938466315`,Rlevel:20},
+        {$role:`835958360028217364`,Rlevel:30},
+        {$role:`835958525581852674`,Rlevel:40},
+        {$role:`835958660277469205`,Rlevel:50},
     ]
 
 module.exports.LevelXP = (level) =>
