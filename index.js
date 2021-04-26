@@ -30,6 +30,6 @@ client.on("message", (message) =>
 {
   if(message.content === "reine")  //why is this still here? xD
   {
-    message.reply(`https://lh3.googleusercontent.com/proxy/9WI6Tbpk0X8wt6427A2ChSgXdmVKxJNyrNh5vFvsKmU5tBOQJs_7gAEWv-52WTAk_C2RJcctrwcmhniIOPcxlu-vQAO9N02WA6UZzV9jXcM8Ir7qtVUoAv07LtIKqtbxrdHGzEtnkAJzCMkTEYMtqEH8wKhE18CzTqPEq4ZHfx0gmIP8hl1H3KcnYJOnhk4qwD7p2963dmkOUSeI0a0wfkMBDv4xlgj_yImTmLE6UmTSngQvzzvp4SojcbRbLl5qP7feIjbYzBNGF_8`)
+    message.reply(``)
   }
 })
