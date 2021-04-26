@@ -30,6 +30,6 @@ client.on("message", (message) =>
 {
   if(message.content === "reine")  //why is this still here? xD
   {
-    message.reply(``)
+    message.reply(`https://i.gifer.com/origin/76/76edc15042bf4866ed596a3a647487fe.gif`)
   }
 })
