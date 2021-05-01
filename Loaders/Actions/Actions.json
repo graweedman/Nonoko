@@ -51,13 +51,14 @@
   },
   "welcome": {
     "gif": [
-      "https://cdn.discordapp.com/attachments/813500872990130246/829743917850427412/welcome-OS.gif",
-      "https://cdn.discordapp.com/attachments/813500872990130246/829743919049736192/welcome-OS2.gif",
-      "https://cdn.discordapp.com/attachments/813500872990130246/829743930295058432/welcome-OS5.gif",
-      "https://cdn.discordapp.com/attachments/813500872990130246/829743928806604810/welcome-OS3.gif"
+      "https://cdn.discordapp.com/attachments/835949706424614913/838013706142482442/welcome_gif-_2.gif",
+      "https://cdn.discordapp.com/attachments/835949706424614913/838013709846446100/welcome_gif-_3.gif",
+      "https://cdn.discordapp.com/attachments/835949706424614913/838013717630287882/welcome_gif-_5.gif",
+      "https://cdn.discordapp.com/attachments/835949706424614913/838013718100836352/welcome_gif-_4.gif",
+      "https://cdn.discordapp.com/attachments/835949706424614913/838013727034703872/welcome_gif-1.gif"
     ],
     "response": {
-      "default": "Welcome to Otakus"
+      "default": "Welcome to Alejandro Cafe"
     }
   },
   "love": {
