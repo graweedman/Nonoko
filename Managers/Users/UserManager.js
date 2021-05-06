@@ -26,7 +26,7 @@ module.exports.create = async (user,NewUser) =>
 
 module.exports.User = async (user, callBack, listener) =>
 {
-    UserModule.findOne({id:user.id}, async (err, User) => {
+    return UserModule.findOne({id:user.id}, async (err, User) => {
         if(err)throw err
         //console.log(User)
         

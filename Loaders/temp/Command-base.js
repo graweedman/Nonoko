@@ -1,8 +1,17 @@
 const { prefix } = require("../../config.json")
+
 const usedCommand = new Set();
+const guildID = "835822907165769768"
 //this is command base module which controls how the commands are read and activated a lot of verification happens here
-module.exports = (client, commandOptions, dev) =>
+module.exports = async (client, commandOptions, dev) =>
 {
+    // const getApp = (guildID) => {
+    //     const app = client.api.applications(client.user.id)
+    //     if(guildID){
+    //       app.guilds(guildID)
+    //     }
+    //     return app
+    //   }
     let {
         commands,
         expectedArgs = '',
@@ -12,6 +21,7 @@ module.exports = (client, commandOptions, dev) =>
         permissions = [],
         requiredRoles = [],
         allowedChannels = [],
+        description,
         callBack
     } = commandOptions // Base template of reading the module files
 
@@ -20,7 +30,26 @@ module.exports = (client, commandOptions, dev) =>
         commands = [commands]
     } 
 
+
+
     console.log(`Registering command "${commands[0]}"`)
+
+    // await getApp(guildID).commands.post({
+    //     data: {
+    //         name: commands[0],
+    //         description
+    //     }
+    // })
+
+    // client.ws.on('INTERACTION_CREATE', async (interaction) =>
+    // {
+    //     const command = interaction.data.name.toLowerCase()
+
+    //     if(command === commands[0])
+    //     {
+    //         callBack()
+    //     }
+    // })
 
     client.on("message", message => {
         
@@ -106,7 +135,7 @@ module.exports = (client, commandOptions, dev) =>
                 }
 
                 //Command handle where the command gets executed
-                callBack(message, arguments, arguments.join(' '))
+                callBack({message, arguments, text:arguments.join(' ')})
 
                 //Sets cooldown if the message author isnt one of the admins
                 if(message.author.id !== "779996172793544735" || message.author.id !== "272697254165348353")
@@ -125,6 +154,7 @@ module.exports = (client, commandOptions, dev) =>
 
         
     })
+    
 }
 
 //A function which turns quoted text as a whole argument

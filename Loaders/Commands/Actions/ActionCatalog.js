@@ -2,6 +2,7 @@ const { MessageEmbed } = require('discord.js')
 const fs = require('fs')
 
 module.exports = {
+    slash: "both",
     commands: ["Catalog"],
     expectedArgs: "<mode> <Role>",
     permissionError: "You do not have required permissions",
@@ -9,7 +10,7 @@ module.exports = {
     requiredRoles: [],
     minArgs: 0,
     maxArgs: null,
-    callBack: (message, arguments, text) => {  
+    callBack: ({message, arguments, text}) => {  
         const {channel} = message
         //console.log(arguments[0])
         const listActions = (err, json) =>
