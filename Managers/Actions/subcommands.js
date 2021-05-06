@@ -9,9 +9,11 @@ module.exports.Action = (subcommand ,arguments, message) =>
     console.log(subcommand)
     //let suboption = (subcommand ? require(`./SubCommands/${subcommand}`) : subcommand)
     try {
-        var suboption = require(`./SubCommands/${subcommand}`);
+        let suboption = require(`./SubCommands/${subcommand}`);
+        console.log(suboption)
         suboption.callback(arguments, message)
     } catch (ex) {
+        console.error(ex)
         let reply = `Supported sub-commands\n\n`
         
         const readCommands = (dir) => {

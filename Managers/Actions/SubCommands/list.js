@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js')
-const fs = require('fs')
+const Action = require('../ActionsManager')
 
 
 module.exports = {
@@ -9,43 +9,46 @@ module.exports = {
     callback: (arguments, {channel}) => 
     {
         const action = arguments[1]
-        const mode = arguments[2]
 
-        const listActions = (err, json) =>
+        const listActions = (err, actions) =>
         {
             if (err) {
                 console.log("Error reading file from disk:", err)
                 return
             }
             let embed = {}
-            const actions = JSON.parse(json)
             
             if(!action){
                 embed = new MessageEmbed({
                     title: "List of Actions"
                 })
-            for(const [key, value] of Object.entries(actions))
-                {
-                    embed.addField(key , `gifs: ${value["gif"].length} | responses: default-"${value["response"].default}"${(value["response"].mentioned ? ` | mentioned-"${value["response"].mentioned}"` : ".")}`)
-                }
+                actions.forEach(action =>{
+                    embed.addField(
+                        action.action,
+                        `gifs: ${action.gifs.length} | responses: default-"${action.responses.default_res}"${(action.responses.mentioned_res ? ` | mentioned-"${action.responses.mentioned_res}"` : ".")}`
+                        )
+                })
+                
                 channel.send(embed)
                 return
             }
-            if(!actions[action])
-            {
-                channel.send("Action doesnt exist.")
-                return
-            }
+
             embed = new MessageEmbed({
                 title: `List of Gifs for \`${action}\``
             })
-            actions[action]["gif"].forEach(gif =>
-                {
-                    embed.addField("\u200b", gif)
-                })
-            channel.send(embed)
+            let Action = actions.find(element => element.action === action)
+            if(Action)
+            {
+                Action.gifs.forEach(gif =>
+                    {
+                        embed.addField("\u200b", gif)
+                    })
+                    channel.send(embed)
+            }
+            
         }
-        fs.readFile("./Loaders/Actions/Actions.json", "utf8", listActions)
+
+        Action.actions(listActions)
 
 
     }

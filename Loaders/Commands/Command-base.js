@@ -13,31 +13,37 @@ module.exports = (client, commandOptions, dev) =>
         requiredRoles = [],
         allowedChannels = [],
         callBack
-    } = commandOptions
+    } = commandOptions // Base template of reading the module files
 
+    // Checks if the commands varieble is a String and converts it
     if(typeof commands === "string"){
         commands = [commands]
-    }
+    } 
 
     console.log(`Registering command "${commands[0]}"`)
 
     client.on("message", message => {
         
-        const { member, content , guild, author } = message
+        const { member, content, guild, author } = message
         
         let hasRoles = false
         let isAllowed = true
+
+        //checks for commands array and iterates every command name until it meets the demand or gets denied
         for(const alias of commands)
         {
             if(content.toLowerCase().startsWith(`${prefix}${alias.toLowerCase()}`))
             {
-                if((dev && author.id !== "272697254165348353") && (dev && author.id !== "693128983453368381"))return
+                if((dev && author.id !== "272697254165348353") && (dev && author.id !== "693128983453368381"))return  // Dev check which disables these modules for non-devs
+
+                //Command cooldown
                 if(usedCommand.has(message.author.id))
                 {
                     message.channel.send("Wait 5 seconds before using another command.")
                     return
                 }
-                
+
+                //Role check for command execution
                 if(requiredRoles.length)
                 {
                     for(const requiredRole of requiredRoles)
@@ -54,16 +60,20 @@ module.exports = (client, commandOptions, dev) =>
                 {
                     hasRoles = true
                 }
-                
+
+                //Role deny
                 if(!hasRoles)
                 {
                     message.channel.send("You dont have required Role")
                     return
                 }
-                console.log(allowedChannels.length)
+
+                // console.log(allowedChannels.length)
+
+                //Checks allowed channel array with message channel
                 if(allowedChannels.length)
                 {
-                    console.log(message.channel.id)
+                    //console.log(message.channel.id)
                     if(allowedChannels.includes(message.channel.id))
                     {
                         //console.log(message.channel.id)
@@ -74,25 +84,31 @@ module.exports = (client, commandOptions, dev) =>
                         isAllowed = false
                     }
                 }
+
+                //Channel deny
                 if(!isAllowed)
                 {
                     message.channel.send(`This command isnt permitted to be used here`)
                     return
                 }
-                const arguments = splitCommandLine(content)
+                const arguments = splitCommandLine(content) //Argument array that is passed to the command module
 
                 console.log(`Command ${alias} has been run`)
-                arguments.shift()
-    
+
+                arguments.shift() //Deletes the first argument which is the command
+                
+                //Checks if the argument lenght is Valid
                 if(arguments.length < minArgs ||
                 (maxArgs !== null && arguments.length > maxArgs))
                 {
                     message.reply(`Invalid syntax! Use ${prefix}${alias} ${expectedArgs}`)
                     return
                 }
-                
-                // Handle
+
+                //Command handle where the command gets executed
                 callBack(message, arguments, arguments.join(' '))
+
+                //Sets cooldown if the message author isnt one of the admins
                 if(message.author.id !== "779996172793544735" || message.author.id !== "272697254165348353")
                 {
                     usedCommand.add(message.author.id);
@@ -111,6 +127,7 @@ module.exports = (client, commandOptions, dev) =>
     })
 }
 
+//A function which turns quoted text as a whole argument
 function splitCommandLine( commandLine ) {
 
     //  Find a unique marker for the space character.

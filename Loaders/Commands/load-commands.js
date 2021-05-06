@@ -24,6 +24,7 @@ module.exports = (client, dev) => {
                 if(client){
                     //console.log(file,option)
 
+                    //
                     commandBase(client, option, dev)
                 }
             }
