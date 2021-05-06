@@ -1,4 +1,5 @@
 const fs = require('fs')
+const Action = require('../ActionsManager')
 
 
 module.exports = {
@@ -8,45 +9,18 @@ module.exports = {
     callback: (arguments, message) => 
     {
         const {channel} = message
-        const action = arguments[1].toLowerCase()
-        const gif = arguments[2]
-        if(!action || !gif || !validURL(gif) )
+        let action = {}
+        action.name = arguments[1].toLowerCase()
+        action.gif = arguments[2]
+        if(!action.name || !action.gif || !validURL(action.gif) )
         {
             channel.send(`correct sytax:\n${module.exports.syntax} `)
             return
         }
-        const Default = arguments[3]
-        const mentioned = arguments[4]
-        const addAction = (err, json) =>
-        {
-            if (err) {
-                console.log("Error reading file from disk:", err)
-                return
-            }
-            const actions = JSON.parse(json)
-            if(!actions[action])
-            {
-                actions[action] = { gif:[], response:{default:null} }
-            }
-            if(!actions[action]["gif"].includes(gif))
-            {
-                actions[action]["gif"].push(gif)
-            }
-            if(Default) actions[action]["response"]["default"] = Default
+        action.default = arguments[3]
+        action.mentioned = arguments[4]
 
-            if(mentioned) actions[action]["response"].mentioned = mentioned
-
-            
-
-            fs.writeFile("./Loaders/Actions/Actions.json",JSON.stringify(actions,null, 2), (err) =>
-            {
-                if (err) console.log('Error writing file:', err)
-                channel.send(`Action ${action} added with gif. ${(Default ? ` With Main response "${Default}".`: "")} ${(mentioned ? ` With mentioned response "${mentioned}".`: "")}`)
-            } )
-        }
-        fs.readFile("./Loaders/Actions/Actions.json", "utf8", addAction)
-
-
+        Action.add(action)
     }
 }
 function validURL(str) {

@@ -4,9 +4,9 @@ const mongoose = require("mongoose")
 const { Client, Message } = require("discord.js")
 const { token , connect } = require("./config.json")
 
-const loadCommands = require("./Loaders/Commands/load-commands")
-const loadListeners = require("./Loaders/Listener/load-listeners")
-const loadActions = require("./Loaders/Actions/LoadAction")
+const loadCommands = require("./Loaders/Commands/load-commands") // Loads up Commands loader
+const loadListeners = require("./Loaders/Listener/load-listeners") // Loads up Listener Loader
+const loadActions = require("./Loaders/Actions/LoadAction") //Loads up action loader
 const dev = process.argv[2]
 //const loadListeners = require("")
 
