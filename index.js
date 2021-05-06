@@ -48,7 +48,7 @@ client.on("message", (message) =>
     message.reply(`https://i.gifer.com/origin/76/76edc15042bf4866ed596a3a647487fe.gif`)
   }
 
-  if(message.content.includes === "horny")
+  if(message.content === "horny")
   {
     message.reply("Who is horny?! GO TO HORNY JAIL!!!").then(`https://media.tenor.com/images/fb0c4d3ea4d31e71974b24634db3985d/tenor.gif`)
   }
